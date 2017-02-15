@@ -1,7 +1,13 @@
-test_constants;
+globalConstants;
+
+global eta;
+global tauHL;
+global tauHE;
+global tauHA;
+global tauHP;
 
 eta = 1;
 
-delays = [28.0, 5.0, 33.0];
+delays = [tauHE, tauHE+tauHL, tauHP, tauHE+tauHL+tauHP, tauHA+tauHP, tauHE+tauHL+tauHP+tauHA, tauHL];
 
-poly = dde23('test_coev', delays, 'test_hist', [0, 600]);
+poly = dde23('test', delays, 'test_hist', [0, 5000]);

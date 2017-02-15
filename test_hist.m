@@ -1,12 +1,15 @@
 function v = test_hist(t)
 
-v = zeros(1, 3);
+v = zeros(3, 1);
 
 if (t == 0)
     v(1) = 0.0;
-    v(2) = 1.0;
-    v(3) = 1.0;
+    v(2) = 1.0;    
 end
+
+v(1) = 1.0;
+v(2) = 1.0; 
+v(3) = 1.0;
 
 % if (t > -28.0)
 %     h = dde23('test_hist_coev', 28.0, 'test_hist2', [0, 28+t]);
